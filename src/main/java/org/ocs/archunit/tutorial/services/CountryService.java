@@ -1,4 +1,4 @@
-package org.ocs.archunit.tutorial.portsadapters;
+package org.ocs.archunit.tutorial.services;
 
 import org.ocs.archunit.tutorial.domain.Country;
 

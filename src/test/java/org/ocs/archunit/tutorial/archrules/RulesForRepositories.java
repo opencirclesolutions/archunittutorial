@@ -2,16 +2,12 @@ package org.ocs.archunit.tutorial.archrules;
 
 import com.tngtech.archunit.base.DescribedPredicate;
 import com.tngtech.archunit.core.domain.JavaClass;
-import com.tngtech.archunit.core.domain.JavaMember;
-import com.tngtech.archunit.core.domain.JavaType;
-import com.tngtech.archunit.core.domain.properties.HasOwner;
 import com.tngtech.archunit.lang.ArchRule;
 import lombok.experimental.UtilityClass;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import static com.tngtech.archunit.core.domain.JavaMember.Predicates.declaredIn;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
 
 @UtilityClass
