@@ -23,14 +23,15 @@ Find two examples of architecture tests in:
 This tutorial has several basic exercises you can use to practise and learn how to use ArchUnit.
 There are several architecture violations in this code that can be found with ArchUnit:
 1. Naming violations (branch Solution1)
-   1. A *repository* interface class name should end with *"Repository"*
-   2. A *service* implementation class name should contain *"Service"*
+   1. A *repository* interface class name should end with *"Repository"* (violated by `CountryDataAccess`)
+   2. A *service* implementation class name should contain *"Service"* (violated by `CustomerJpaImpl`)
 2. Structure violations (branch Solution2)
-   1. Entities should reside within package domain
-   2. Repositories should reside in package dataaccess
+   1. Entities should reside within package domain (violated by `Customer`)
+   2. Repositories should reside in package dataaccess (violated by `CustomerRepository`)
+   3. Services should reside in package services (violated by `CustomerJpaImpl`)
 3. Separation of Concern violations (branch Solution3)
-   1. Classes in package dataaccess may not access classes in package services
-   2. Classes in package ui may not access classes in package dataaccess
+   1. Classes in package dataaccess may not access classes in package services (violated by `CustomerJpaImpl`)
+   2. Classes in package ui may not access classes in package dataaccess (violated by `TutorialCliApplication`)
 
 You are encouraged to solve the ArchUnit rules to the previous violations yourself.
 The solutions to the exercises can be found in the mentioned git branches.
