@@ -8,6 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
 
 @UtilityClass
@@ -85,6 +86,11 @@ public class RulesForRepositories {
                 .should().haveRawReturnType(eitherOptionalOrCollection());
     }
 
+    public static ArchRule every_repository_should_be_properly_named(){
+        return classes()
+                .that().areAssignableTo(CrudRepository.class)
+                .should().haveNameMatching(".*Repository");
+    }
 
     static DescribedPredicate<JavaClass> eitherOptionalOrCollection() {
         return new DescribedPredicate<JavaClass>("either Optional or Collection") {
