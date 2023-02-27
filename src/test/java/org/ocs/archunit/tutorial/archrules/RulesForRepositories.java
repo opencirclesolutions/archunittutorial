@@ -88,7 +88,8 @@ public class RulesForRepositories {
 
     public static ArchRule every_repository_should_be_properly_named(){
         return classes()
-                .that().areAssignableTo(CrudRepository.class)
+                .that().areAnnotatedWith(Repository.class)
+                .or().areAssignableTo(CrudRepository.class)
                 .should().haveNameMatching(".*Repository");
     }
 
