@@ -1,0 +1,2 @@
+Method <org.ocs.archunit.tutorial.services.CountryServiceHibernateImpl.findByName(java.lang.String)> calls method <org.hibernate.query.Query.getResultStream()> in (CountryServiceHibernateImpl.java:20)
+Method <org.ocs.archunit.tutorial.services.CountryServiceHibernateImpl.findByName(java.lang.String)> calls method <org.hibernate.query.Query.setParameter(java.lang.String, java.lang.Object)> in (CountryServiceHibernateImpl.java:19)
